@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "netflix-control",
+  "version": "1.0.0",
+  "description": "enhanced control of video for netflix",
+  "author": "Roy Huang",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ],
+  "options_page": "options.html",
+  "background": {},
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.netflix.com/*"
+      ],
+      "js": [
+        "js/control.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "images/netflix.png",
+    "32": "images/netflix.png",
+    "48": "images/netflix.png",
+    "128": "images/netflix.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/netflix.png",
+    "default_title": "这是一个示例Chrome插件"
+  }
+}
